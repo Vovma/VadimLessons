@@ -1,6 +1,23 @@
-<div>
-  <span>My First Project</span>
+<div class="menu">
+  <div class="logo">
+    <img src="assets/apple1.png" alt="" />
+  </div>
+
+  <div class="menu-actions">
+    <button (click)="showConsoleLog('1000$')">Home</button>
+    <button>Contact Us</button>
+    <button class="custom-login__btn">Login</button>
+    <button (click)="counterFun()">Counter {{ counter }}</button>
+  </div>
 </div>
-<div>
-  <span>New changes</span>
+
+<div class="actions">
+  <div class="action-btns">
+    <button (click)="arrayFun()">Array function</button>
+    <button>Object function</button>
+  </div>
+
+  <div class="results">
+    <!-- {{ arrayAfterManipulation?.length }} -->
+  </div>
 </div>
