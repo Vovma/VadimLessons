@@ -13,11 +13,26 @@
 
 <div class="actions">
   <div class="action-btns">
-    <button (click)="arrayFun()">Array function</button>
+    <button (click)="addNewName('Volodymyr')">Add name</button>
     <button>Object function</button>
   </div>
+</div>
 
-  <div class="results">
-    <!-- {{ arrayAfterManipulation?.length }} -->
+<div class="user-sections" *ngFor="let user of userList">
+  <div class="user-section__element">
+    <span>Name: </span>
+    <span>{{ user.name }}</span>
+  </div>
+  <div class="user-section__element">
+    <span>Sername: </span>
+    <span>{{ user.sername }}</span>
+  </div>
+  <div class="user-section__element">
+    <span>Age: </span>
+    <span>{{ user.age }}</span>
+  </div>
+  <div class="user-section__element">
+    <span>HasWork: </span>
+    <span>{{ user.hasWork }}</span>
   </div>
 </div>
