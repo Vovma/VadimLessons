@@ -23,8 +23,8 @@
       border-radius: 8px;
       padding-left: 14px;
       padding-right: 14px;
-      background: #000000;
-      color: white;
+      background: #503030;
+      color: rgb(161, 38, 38);
 
       &:hover {
         background: white;
@@ -89,3 +89,15 @@
   margin-left: 20px;
   width: 100px;
 }
+
+.menu-actions { 
+  button{ 
+     height: 50px;
+    width: 100px;
+    background-color: #c41919;
+  }
+}
+
+
+  
+  

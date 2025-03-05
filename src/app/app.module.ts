@@ -2,9 +2,16 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { MyFirstComponentComponent } from './components/my-first-component/my-first-component.component';
+import { VadimComponent2Component } from './components/vadim-component-2/vadim-component-2.component';
+import { VadimComponent1Component } from './components/vadim-component-1/vadim-component-1.component';
 
 @NgModule({
-  declarations: [AppComponent, MyFirstComponentComponent],
+  declarations: [
+    AppComponent,
+    MyFirstComponentComponent,
+    VadimComponent1Component,
+    VadimComponent2Component,
+  ],
   imports: [BrowserModule],
   exports: [MyFirstComponentComponent],
   bootstrap: [AppComponent],

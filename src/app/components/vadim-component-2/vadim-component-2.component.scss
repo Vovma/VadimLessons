@@ -1,0 +1,29 @@
+.vadim-counter {
+  display: inline-flex;
+  padding: 20px;
+  background: green;
+  gap: 10px;
+  margin-left: 20px;
+  button {
+    height: 100px;
+    width: 100px;
+    background-color: #c41919;
+    border-radius: 10%;
+    border: 0;
+    font-size: 20px;
+    color: white;
+
+    &:hover {
+      background: rgb(221, 78, 78);
+      color: aqua;
+    }
+  }
+
+  .vadim-counter__value {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+  }
+}

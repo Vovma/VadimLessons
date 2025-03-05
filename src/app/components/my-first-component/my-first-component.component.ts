@@ -20,7 +20,7 @@ export interface testObjectInterface {
 // string -> 'rjghergjkehgrjkerh'
 // boolean -> true / false
 export class MyFirstComponentComponent implements OnInit {
-  public counter = 0;
+  public counter = 50;
 
   public name!: string;
   public sername!: string;
