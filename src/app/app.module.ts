@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { MyFirstComponentComponent } from './components/my-first-component/my-first-component.component';
 import { VadimComponent2Component } from './components/vadim-component-2/vadim-component-2.component';
 import { VadimComponent1Component } from './components/vadim-component-1/vadim-component-1.component';
+import { KebabMenuComponent } from './components/kebab-menu/kebab-menu.component';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { VadimComponent1Component } from './components/vadim-component-1/vadim-c
     MyFirstComponentComponent,
     VadimComponent1Component,
     VadimComponent2Component,
+    KebabMenuComponent,
   ],
   imports: [BrowserModule],
   exports: [MyFirstComponentComponent],
