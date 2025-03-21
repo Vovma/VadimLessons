@@ -33,19 +33,32 @@
 
     .logo {
       img {
-        width: 200px;
+        width: 100px;
         margin-left: 20px;
       }
     }
   }
   .kebab-menu__right {
-    background-color: rgb(143, 56, 56);
+    background-color: rgb(255, 255, 255);
     height: 100%;
     display: flex;
     flex: 1;
     align-items: center;
     justify-content: flex-end;
     gap: 10px;
+    button {
+      margin-right: 20px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 0;
+      color: rgb(255, 255, 255);
+      background-color: black;
+      &:hover {
+        background-color: rgb(170, 170, 170);
+        color: aqua;
+        cursor: pointer;
+      }
+    }
 
     .logo-2 {
       order: 2;

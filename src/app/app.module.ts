@@ -5,6 +5,7 @@ import { MyFirstComponentComponent } from './components/my-first-component/my-fi
 import { VadimComponent2Component } from './components/vadim-component-2/vadim-component-2.component';
 import { VadimComponent1Component } from './components/vadim-component-1/vadim-component-1.component';
 import { KebabMenuComponent } from './components/kebab-menu/kebab-menu.component';
+import { KebabFooter } from './components/kebab-footer/kebab-footer';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { KebabMenuComponent } from './components/kebab-menu/kebab-menu.component
     VadimComponent1Component,
     VadimComponent2Component,
     KebabMenuComponent,
+    KebabFooter,
   ],
   imports: [BrowserModule],
   exports: [MyFirstComponentComponent],
