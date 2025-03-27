@@ -54,3 +54,36 @@
     }
   }
 }
+.product-card {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  background: rgb(117, 29, 189);
+  padding: 20px;
+  flex-direction: column;
+  .product2 {
+    width: 150px;
+    // height: 100px;
+    background-color: rgb(6, 36, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 30px;
+    .product-description {
+      // width: 150px;
+      // height: 30px;
+      background-color: rgb(55, 30, 219);
+      padding: 10px;
+    }
+  }
+  .image {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
