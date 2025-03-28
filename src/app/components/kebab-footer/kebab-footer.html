@@ -1,68 +1,52 @@
-<div class="kebab-footer">
+<!-- <div class="kebab-footer">
   <div class="logo2">
     <img src="assets/kebab1.png" alt="" />
   </div>
   <p class="underlined">Регламент|</p>
   <p class="underlined">Политика|</p>
   <p class="underlined">Условия соглашения|</p>
+</div> -->
+
+<div class="kebab-page">
+  <div class="left-side"></div>
+  <div class="right-side"></div>
 </div>
-<div class="flex-test">
-  <div class="product">
-    <div class="product-description image"></div>
+
+<div class="product-card">
+  <div class="product2" *ngFor="let yourOwnName of kebabList">
+    <div class="product-description image">
+      <img src="assets/kebab23.jpg" alt="Kebab" />
+    </div>
     <div class="product-description product-name">
-      <span>Devis kebab</span>
+      <span>{{ yourOwnName.name }}</span>
     </div>
     <div class="product-description product-price">
-      <span>20 zl</span>
+      <span>{{ yourOwnName.price }}</span>
+    </div>
+
+    <div class="product-description card">
+      <button class="add-to-card" (click)="openProduct(yourOwnName)">
+        OPEN PRODUCT
+      </button>
     </div>
   </div>
+</div>
 
-  <div class="product">
-    <div class="product-description"></div>
-    <div class="product-description"></div>
-    <div class="product-description"></div>
-  </div>
-  <div class="product">
-    <div class="product-description"></div>
-    <div class="product-description"></div>
-    <div class="product-description"></div>
-  </div>
-  <!-- <span>Devis kebab</span> -->
-</div>
-<div class="product-description product-price">
-  <!-- <span>20 zl</span> -->
-</div>
-<div class="product">
-  <div class="product-description"></div>
-  <div class="product-description"></div>
-  <div class="product-description"></div>
-</div>
-<div class="product">
-  <div class="product-description"></div>
-  <div class="product-description"></div>
-  <div class="product-description"></div>
-</div>
-<div class="product-card">
+<div class="big-product-card">
   <div class="product2">
     <div class="product-description image">
       <img src="assets/kebab23.jpg" alt="Kebab" />
     </div>
     <div class="product-description product-name">
-      <span>Kebab</span>
+      <span>{{ homeWorkKebabElement.name }}</span>
     </div>
     <div class="product-description product-price">
-      <span>369$</span>
+      <span>{{ homeWorkKebabElement.price }}</span>
     </div>
-    <div class="product-description cart">ADD TO CART</div>
-  </div>
-  <div class="product">
-    <div class="product-description"></div>
-    <div class="product-description"></div>
-    <div class="product-description"></div>
-  </div>
-  <div class="product">
-    <div class="product-description"></div>
-    <div class="product-description"></div>
-    <div class="product-description"></div>
+    <div class="product-description card">
+      <button class="add-to-card" (click)="addToCard(homeWorkKebabElement)">
+        ADD TO CARD
+      </button>
+    </div>
   </div>
 </div>
