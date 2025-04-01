@@ -8,45 +8,68 @@
 </div> -->
 
 <div class="kebab-page">
-  <div class="left-side"></div>
-  <div class="right-side"></div>
-</div>
-
-<div class="product-card">
-  <div class="product2" *ngFor="let yourOwnName of kebabList">
-    <div class="product-description image">
-      <img src="assets/kebab23.jpg" alt="Kebab" />
-    </div>
-    <div class="product-description product-name">
-      <span>{{ yourOwnName.name }}</span>
-    </div>
-    <div class="product-description product-price">
-      <span>{{ yourOwnName.price }}</span>
-    </div>
-
-    <div class="product-description card">
-      <button class="add-to-card" (click)="openProduct(yourOwnName)">
-        OPEN PRODUCT
-      </button>
+  <div class="left-side">
+    <div class="product-card">
+      <div class="product2" *ngFor="let yourOwnName of kebabList">
+        <div class="product-description image">
+          <img src="assets/kebab23.jpg" alt="Kebab" />
+        </div>
+        <div class="product-description product-name">
+          <span>{{ yourOwnName.name }}</span>
+        </div>
+        <div class="product-description product-price">
+          <span>{{ yourOwnName.price }}</span>
+        </div>
+        <!-- <div class="product-description product-meet">
+          <span>{{ yourOwnName.meet }}</span>
+        </div>
+        <div class="product-description product-weight">
+          <span>{{ yourOwnName.weight }}</span>
+        </div>
+        <div class="product-description product-sause">
+          <span>{{ yourOwnName.sause }}</span>
+        </div> -->
+        <div class="product-description card">
+          <button class="add-to-card" (click)="openProduct(yourOwnName)">
+            OPEN PRODUCT
+          </button>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-
-<div class="big-product-card">
-  <div class="product2">
-    <div class="product-description image">
-      <img src="assets/kebab23.jpg" alt="Kebab" />
-    </div>
-    <div class="product-description product-name">
-      <span>{{ homeWorkKebabElement.name }}</span>
-    </div>
-    <div class="product-description product-price">
-      <span>{{ homeWorkKebabElement.price }}</span>
-    </div>
-    <div class="product-description card">
-      <button class="add-to-card" (click)="addToCard(homeWorkKebabElement)">
-        ADD TO CARD
-      </button>
+  <div class="right-side">
+    <div class="big-product-card">
+      <div class="product2">
+        <div class="product-description image">
+          <img
+            [src]="homeWorkKebabElement.img"
+            alt="{{ homeWorkKebabElement.name }}"
+          />
+        </div>
+        <div class="product-description product-name">
+          <span>{{ homeWorkKebabElement.name }}</span>
+        </div>
+        <div class="product-description product-price">
+          <span>{{ homeWorkKebabElement.price }}</span>
+        </div>
+        <div class="product-description">
+          <span><b>meat:</b> {{ homeWorkKebabElement.meat }}</span>
+        </div>
+        <div class="product-description">
+          <span><b>weight:</b> {{ homeWorkKebabElement.weight }}</span>
+        </div>
+        <div class="product-description">
+          <span><b>sause:</b> {{ homeWorkKebabElement.sause }}</span>
+        </div>
+        <div class="product-description card">
+          <button class="add-to-card" (click)="addToCard(homeWorkKebabElement)">
+            ACCEPT
+          </button>
+          <button *ngIf="cart[homeWorkKebabElement.name]" class="cart-counter">
+            {{ cart[homeWorkKebabElement.name] }}
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -2,7 +2,72 @@
 .product-card {
   display: flex;
   gap: 10px;
-  background: lightgrey;
+  background: gray;
+  padding: 20px;
+  flex-wrap: wrap;
+  .product2 {
+    width: 220px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 10px;
+    border-radius: 7px;
+    .product-description {
+      padding: 10px;
+
+      &.product-name {
+        color: gray;
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      &.product-price {
+        color: gray;
+      }
+      &.product-meet {
+        color: gray;
+      }
+
+      &.card {
+        .add-to-card {
+          background: white;
+          border: 1px solid rgb(37, 158, 37);
+          padding: 10px;
+          border-radius: 20px;
+          color: rgb(37, 158, 37);
+          font-weight: bold;
+
+          &:hover {
+            background: rgb(37, 158, 37);
+            color: white;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .image {
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 200px;
+      width: 200px;
+      border-radius: 7px;
+    }
+  }
+}
+
+// Element
+.big-product-card {
+  display: flex;
+  gap: 10px;
+  background: gray;
   padding: 20px;
   flex-wrap: wrap;
   .product2 {
@@ -59,65 +124,39 @@
     }
   }
 }
-
-// Element
-.big-product-card {
+.kebab-page {
   display: flex;
-  gap: 10px;
-  background: red;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0px;
   padding: 20px;
-  flex-wrap: wrap;
-  .product2 {
-    width: 220px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3px;
-    padding: 10px;
-    border-radius: 7px;
-    .product-description {
-      padding: 10px;
-
-      &.product-name {
-        color: gray;
-        font-weight: bold;
-        font-size: 20px;
-      }
-
-      &.product-price {
-        color: gray;
-      }
-
-      &.card {
-        .add-to-card {
-          background: white;
-          border: 1px solid rgb(37, 158, 37);
-          padding: 10px;
-          border-radius: 20px;
-          color: rgb(37, 158, 37);
-          font-weight: bold;
-
-          &:hover {
-            background: rgb(37, 158, 37);
-            color: white;
-            cursor: pointer;
-          }
-        }
-      }
-    }
-  }
-  .image {
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    img {
-      height: 200px;
-      width: 200px;
-      border-radius: 7px;
-    }
-  }
+  max-width: 100%;
+  margin: auto;
+  background: gray;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ddd;
+  height: 100%;
+  box-sizing: border-box;
+}
+.left-side,
+.right-side {
+  width: 48%;
+  flex: 1;
+}
+.product-description {
+  color: gray;
+  font-weight: bold;
+  font-size: 20px;
+}
+.cart-counter {
+  background-color: #ffcc00;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+  cursor: default;
 }
