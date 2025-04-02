@@ -160,3 +160,48 @@
   margin-left: 10px;
   cursor: default;
 }
+.kebab-footer {
+  display: flex;
+  align-items: center;
+  background: black;
+  margin-top: 200px;
+  justify-content: space-between;
+  padding: 20px;
+  color: #ddd;
+}
+.kebab-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row-reverse;
+}
+.kebab-logo-name {
+  font-weight: bold;
+  color: #ffcc00;
+  white-space: nowrap;
+  margin-top: 0px;
+}
+.logo2 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  img {
+    height: 80px;
+    width: 80px;
+  }
+}
+.footer-links a {
+  gap: 10px;
+  color: #ffcc00;
+  text-decoration: none;
+  align-items: flex-end;
+  display: inline-flex;
+}
+.footer-links a:hover {
+  color: #c71919;
+  cursor: pointer;
+}
+.divider {
+  color: white;
+  font-weight: bold;
+}
