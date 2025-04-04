@@ -15,6 +15,8 @@ export class KebabCreationFormComponent {
     name: new FormControl(''),
     price: new FormControl(''),
     sause: new FormControl(''),
+    size: new FormControl(''),
+    weight: new FormControl(''),
   });
 
   onSave() {
