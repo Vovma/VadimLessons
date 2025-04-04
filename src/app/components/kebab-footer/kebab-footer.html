@@ -1,3 +1,38 @@
+<div class="form-content">
+  <span>Kebab creation form</span>
+
+  <form class="kebab-form" [formGroup]="createKebabForm">
+    <mat-form-field class="example-form-field" appearance="outline">
+      <mat-label>Kebab name</mat-label>
+      <input matInput type="text" formControlName="name" />
+
+      <button matSuffix mat-icon-button aria-label="Clear">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field class="example-form-field" appearance="outline">
+      <mat-label>Kebab price</mat-label>
+      <input matInput type="text" formControlName="price" />
+
+      <button matSuffix mat-icon-button aria-label="Clear">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field class="example-form-field" appearance="outline">
+      <mat-label>Kebab sause</mat-label>
+      <input matInput type="text" formControlName="sause" />
+
+      <button matSuffix mat-icon-button aria-label="Clear">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </form>
+  <div class="btns-content">
+    <button mat-raised-button color="error" (click)="onClear()">Clear</button>
+    <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+  </div>
+</div>
+
 <div class="kebab-page">
   <div class="left-side">
     <div class="product-card">
@@ -82,3 +117,5 @@
     <span><a href="kebab-text1">Условия и соглашения</a></span>
   </div>
 </div>
+<button mat-raised-button color="primary">Basic</button>
+<button mat-button>Basic</button>

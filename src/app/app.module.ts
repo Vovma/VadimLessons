@@ -6,6 +6,13 @@ import { VadimComponent2Component } from './components/vadim-component-2/vadim-c
 import { VadimComponent1Component } from './components/vadim-component-1/vadim-component-1.component';
 import { KebabMenuComponent } from './components/kebab-menu/kebab-menu.component';
 import { KebabFooter } from './components/kebab-footer/kebab-footer';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +23,15 @@ import { KebabFooter } from './components/kebab-footer/kebab-footer';
     KebabMenuComponent,
     KebabFooter,
   ],
-  imports: [BrowserModule],
+  imports: [
+    BrowserModule,
+    MatButtonModule,
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatIconModule,
+    ReactiveFormsModule,
+  ],
   exports: [MyFirstComponentComponent],
   bootstrap: [AppComponent],
 })
