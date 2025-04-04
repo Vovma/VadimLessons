@@ -1,0 +1,20 @@
+.form-content {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  .btns-content {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+
+    button {
+      width: 60px;
+    }
+  }
+  .kebab-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  padding: 20px;
+}

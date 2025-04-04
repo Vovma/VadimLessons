@@ -9,11 +9,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   standalone: false,
 })
 export class KebabFooter {
-  createKebabForm = new FormGroup({
-    name: new FormControl(''),
-    price: new FormControl(''),
-    sause: new FormControl(''),
-  });
   public kebabList = [
     {
       name: 'Kebab1',
@@ -73,11 +68,5 @@ export class KebabFooter {
     } else {
       this.cart[this.homeWorkKebabElement.name] = 1;
     }
-  }
-  onSave() {
-    console.log('form', this.createKebabForm.value);
-  }
-  onClear() {
-    this.createKebabForm.reset();
   }
 }
