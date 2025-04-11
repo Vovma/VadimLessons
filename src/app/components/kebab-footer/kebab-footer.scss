@@ -26,6 +26,10 @@
       &.product-price {
         color: gray;
       }
+      &.product-ingridients {
+        display: flex;
+        flex-direction: column;
+      }
       &.product-meet {
         color: gray;
       }

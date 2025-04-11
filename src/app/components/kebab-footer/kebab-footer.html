@@ -11,7 +11,13 @@
           <span>{{ yourOwnName.name }}</span>
         </div>
         <div class="product-description product-price">
-          <span>{{ yourOwnName.price }}</span>
+          <span>{{ yourOwnName.price }}{{yourOwnName.currency}}</span>
+        </div>
+        <div class="product-description product-ingridients">
+          <span>ingredients</span>
+          <span *ngFor="let ingridient of yourOwnName.ingredients ">
+            {{ingridient}}
+          </span>
         </div>
         <!-- <div class="product-description product-meet">
           <span>{{ yourOwnName.meet }}</span>

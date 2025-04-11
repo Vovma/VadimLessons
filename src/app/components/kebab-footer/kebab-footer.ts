@@ -11,12 +11,39 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class KebabFooter {
   public kebabList = [
     {
-      name: 'Kebab1',
-      price: '27 PLN',
-      meat: 'Chicken',
-      weight: '120g',
-      sause: 'Ketchup',
-      img: 'assets/chiken.jpg',
+      id: 'kebab001',
+      name: 'Chicken Kebab Wrap',
+      category: 'Fast Food',
+      image: '',
+      description:
+        'Grilled chicken kebab wrapped in fresh pita bread with salad and garlic sauce.',
+      ingredients: [
+        //ngFor
+        'Grilled chicken',
+        'Pita bread',
+        'Lettuce',
+        'Tomato',
+        'Onion',
+        'Garlic sauce',
+      ],
+      price: 6.99,
+      currency: 'EUR',
+      weight: '150g',
+      availability: 'InStock',
+      rating: {
+        average: 4.7,
+        count: 128,
+      },
+      nutrition: {
+        calories: 520,
+        fat: '20g',
+        carbohydrates: '45g',
+        protein: '32g',
+      },
+      brand: 'Kebab Express',
+      allergens: ['Gluten', 'Dairy', 'Garlic'],
+      spicyLevel: 'Mild',
+      vegetarian: false,
     },
     {
       name: 'Kebab2',
