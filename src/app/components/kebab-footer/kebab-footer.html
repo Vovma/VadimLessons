@@ -14,16 +14,23 @@
           <span>{{ yourOwnName.price }}{{yourOwnName.currency}}</span>
         </div>
         <div class="product-description product-ingridients">
-          <span>ingredients</span>
-          <span *ngFor="let ingridient of yourOwnName.ingredients ">
+          <span class="product-ingridients__name">Ingredients:</span>
+          <span
+            class="product-ingridients__value"
+            *ngFor="let ingridient of yourOwnName.ingredients "
+          >
             {{ingridient}}
           </span>
         </div>
         <div class="product-description product-nutritions">
-          <span>Calories:</span>
-          <span>{{ yourOwnName.nutrition.calories }}</span>
-          <span>Fat:</span>
-          <span>{{ yourOwnName.nutrition.fat }}</span>
+          <div class="product-nutritions__el">
+            <span>Calories:</span>
+            <span>{{ yourOwnName.nutrition.calories }}</span>
+          </div>
+          <div class="product-nutritions__el">
+            <span>Fat:</span>
+            <span>{{ yourOwnName.nutrition.fat }}</span>
+          </div>
         </div>
 
         <!-- <div class="product-description product-meet">
