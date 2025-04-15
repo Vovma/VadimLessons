@@ -5,7 +5,7 @@
     <div class="product-card">
       <div class="product2" *ngFor="let yourOwnName of kebabList">
         <div class="product-description image">
-          <img src="assets/kebab23.jpg" alt="Kebab" />
+          <img [src]="yourOwnName.image" [alt]="yourOwnName.name" />
         </div>
         <div class="product-description product-name">
           <span>{{ yourOwnName.name }}</span>
@@ -19,6 +19,13 @@
             {{ingridient}}
           </span>
         </div>
+        <div class="product-description product-nutritions">
+          <span>Calories:</span>
+          <span>{{ yourOwnName.nutrition.calories }}</span>
+          <span>Fat:</span>
+          <span>{{ yourOwnName.nutrition.fat }}</span>
+        </div>
+
         <!-- <div class="product-description product-meet">
           <span>{{ yourOwnName.meet }}</span>
         </div>
@@ -41,7 +48,7 @@
       <div class="product2">
         <div class="product-description image">
           <img
-            [src]="homeWorkKebabElement.img"
+            [src]="homeWorkKebabElement.image"
             alt="{{ homeWorkKebabElement.name }}"
           />
         </div>

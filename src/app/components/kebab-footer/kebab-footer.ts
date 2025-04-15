@@ -12,14 +12,14 @@ export class KebabFooter {
   public kebabList = [
     {
       id: 'kebab001',
-      name: 'Chicken Kebab Wrap',
+      name: 'Lamb Kebab Wrap',
       category: 'Fast Food',
-      image: '',
+      image: 'assets/lamb.jpg',
       description:
-        'Grilled chicken kebab wrapped in fresh pita bread with salad and garlic sauce.',
+        'Grilled lamb kebab wrapped in fresh pita bread with salad and garlic sauce.',
       ingredients: [
         //ngFor
-        'Grilled chicken',
+        'Grilled lamb',
         'Pita bread',
         'Lettuce',
         'Tomato',
@@ -46,20 +46,72 @@ export class KebabFooter {
       vegetarian: false,
     },
     {
-      name: 'Kebab2',
-      price: '32 PLN',
-      meat: 'Beef',
-      weight: '150g',
-      sause: 'Garlic',
-      img: 'assets/beef.jpg',
+      id: 'kebab001',
+      name: 'Chicken Kebab Wrap',
+      category: 'Fast Food',
+      image: 'assets/chiken.jpg',
+      description:
+        'Grilled chicken kebab wrapped in fresh pita bread with salad and garlic sauce.',
+      ingredients: [
+        'Grilled chicken',
+        'Pita bread',
+        'Lettuce',
+        'Tomato',
+        'Onion',
+        'Garlic sauce',
+      ],
+      price: 6.99,
+      currency: 'EUR',
+      weight: '200g',
+      availability: 'InStock',
+      rating: {
+        average: 4.7,
+        count: 128,
+      },
+      nutrition: {
+        calories: 520,
+        fat: '20g',
+        carbohydrates: '45g',
+        protein: '32g',
+      },
+      brand: 'Kebab Express',
+      allergens: ['Gluten', 'Dairy', 'Garlic'],
+      spicyLevel: 'Mild',
+      vegetarian: false,
     },
     {
-      name: 'Kebab3',
-      price: '38 PLN',
-      meat: 'Lamb',
-      weight: '170g',
-      sause: 'Mayonnaise',
-      img: 'assets/lamb.jpg',
+      id: 'kebab002',
+      name: 'Beef Kebab',
+      category: 'Fast Food',
+      image: 'assets/beef.jpg',
+      description:
+        'Juicy beef kebab served with garlic sauce and fresh vegetables.',
+      ingredients: [
+        'Beef',
+        'Pita bread',
+        'Lettuce',
+        'Tomato',
+        'Onion',
+        'Garlic sauce',
+      ],
+      price: 32,
+      currency: 'PLN',
+      weight: '150g',
+      availability: 'InStock',
+      rating: {
+        average: 4.5,
+        count: 97,
+      },
+      nutrition: {
+        calories: 580,
+        fat: '25g',
+        carbohydrates: '40g',
+        protein: '35g',
+      },
+      brand: 'Kebab Express',
+      allergens: ['Gluten', 'Garlic'],
+      spicyLevel: 'Medium',
+      vegetarian: false,
     },
   ];
 
@@ -69,7 +121,7 @@ export class KebabFooter {
     meat: 'chicken',
     weight: '120g',
     sause: 'ketchup',
-    img: 'assets/kebab23.jpg',
+    image: 'assets/kebab23.jpg',
   };
 
   // nameWhatYouWant -> Kebab elemnt
