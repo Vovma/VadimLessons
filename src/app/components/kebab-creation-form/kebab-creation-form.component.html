@@ -1,50 +1,112 @@
 <div class="form-content">
-  <span>Kebab creation form</span>
+  <span class="Kebbcrfrm">Kebab creation form</span>
 
   <form class="kebab-form" [formGroup]="createKebabForm">
-    <mat-form-field class="example-form-field" appearance="outline">
-      <mat-label>Kebab name</mat-label>
-      <input matInput type="text" formControlName="name" />
+    <div class="form-columns">
+      <div class="form-left">
+        <mat-form-field class="example-form-field" appearance="outline">
+          <mat-label>Kebab name</mat-label>
+          <input matInput type="text" formControlName="name" />
+          <button matSuffix mat-icon-button aria-label="Clear">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
 
-      <button matSuffix mat-icon-button aria-label="Clear">
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-form-field>
-    <mat-form-field class="example-form-field" appearance="outline">
-      <mat-label>Kebab price</mat-label>
-      <input matInput type="text" formControlName="price" />
+        <mat-form-field class="example-form-field" appearance="outline">
+          <mat-label>Kebab price</mat-label>
+          <input matInput type="text" formControlName="price" />
+          <button matSuffix mat-icon-button aria-label="Clear">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
 
-      <button matSuffix mat-icon-button aria-label="Clear">
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-form-field>
-    <mat-form-field class="example-form-field" appearance="outline">
-      <mat-label>Kebab sause</mat-label>
-      <input matInput type="text" formControlName="sause" />
+        <mat-form-field class="example-form-field" appearance="outline">
+          <mat-label>Kebab sauce</mat-label>
+          <input matInput type="text" formControlName="sause" />
+          <button matSuffix mat-icon-button aria-label="Clear">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
 
-      <button matSuffix mat-icon-button aria-label="Clear">
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-form-field>
-    <mat-form-field class="example-form-field" appearance="outline">
-      <mat-label>Kebab size</mat-label>
-      <input matInput type="text" formControlName="size" />
+        <mat-form-field class="example-form-field" appearance="outline">
+          <mat-label>Kebab size</mat-label>
+          <input matInput type="text" formControlName="size" />
+          <button matSuffix mat-icon-button aria-label="Clear">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
 
-      <button matSuffix mat-icon-button aria-label="Clear">
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-form-field>
-    <mat-form-field class="example-form-field" appearance="outline">
-      <mat-label>Kebab weight</mat-label>
-      <input matInput type="text" formControlName="size" />
+        <mat-form-field class="example-form-field" appearance="outline">
+          <mat-label>Kebab weight</mat-label>
+          <input matInput type="text" formControlName="weight" />
+          <button matSuffix mat-icon-button aria-label="Clear">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
 
-      <button matSuffix mat-icon-button aria-label="Clear">
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-form-field>
+      <div class="form-right">
+        <div class="row-lists">
+          <mat-form-field appearance="outline">
+            <mat-label>Ingredients - Lamb</mat-label>
+            <mat-select formControlName="ingredients" multiple>
+              @for (ingredient of kebabIngredientsList; track ingredient) {
+              <mat-option [value]="ingredient">{{ ingredient }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Ingredients - Beef</mat-label>
+            <mat-select formControlName="ingredients" multiple>
+              @for (ingredient of kebabIngredientsListBeef; track ingredient) {
+              <mat-option [value]="ingredient">{{ ingredient }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Ingredients - Chicken</mat-label>
+            <mat-select formControlName="ingredients" multiple>
+              @for (ingredient of kebabIngredientsListChicken; track ingredient)
+              {
+              <mat-option [value]="ingredient">{{ ingredient }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Allergens - Chicken</mat-label>
+            <mat-select formControlName="allergens" multiple>
+              @for (allergens of kebabAllergensListChicken; track allergens) {
+              <mat-option [value]="allergens">{{ allergens }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Allergens - Beef</mat-label>
+            <mat-select formControlName="allergens" multiple>
+              @for (allergens of kebabAllergensListBeef; track allergens) {
+              <mat-option [value]="allergens">{{ allergens }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Allergens - Lamb</mat-label>
+            <mat-select formControlName="allergens" multiple>
+              @for (allergens of kebabAllergensListLamb; track allergens) {
+              <mat-option [value]="allergens">{{ allergens }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
   </form>
-  <div class="btns-content">
-    <button mat-raised-button color="error" (click)="onClear()">Clear</button>
-    <button mat-raised-button color="primary" (click)="onSave()">Save</button>
-  </div>
+</div>
+<div class="btns-content">
+  <button mat-raised-button color="error" (click)="onClear()">Clear</button>
+  <button mat-raised-button color="primary" (click)="onSave()">Save</button>
 </div>

@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 
 import { AppComponent } from './app.component';
 import { MyFirstComponentComponent } from './components/my-first-component/my-first-component.component';
@@ -33,6 +34,7 @@ import { KebabCreationFormComponent } from './components/kebab-creation-form/keb
     MatFormFieldModule,
     MatIconModule,
     ReactiveFormsModule,
+    MatSelectModule,
   ],
   exports: [MyFirstComponentComponent],
   bootstrap: [AppComponent],

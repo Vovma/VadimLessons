@@ -18,22 +18,25 @@ export class KebabFooter {
       description:
         'Grilled lamb kebab wrapped in fresh pita bread with salad and garlic sauce.',
       ingredients: [
-        ' - Grilled lamb',
-        ' - Pita bread',
-        ' - Lettuce',
-        ' - Tomato',
-        ' - Onion',
-        ' - Garlic sauce',
+        //ngFor
+        'Grilled lamb',
+        'Pita bread',
+        'Lettuce',
+        'Tomato',
+        'Onion',
+        'Garlic sauce',
       ],
       price: 6.99,
       currency: 'EUR',
       weight: '150g',
       availability: 'InStock',
       rating: {
+        //не нужно
         average: 4.7,
         count: 128,
       },
       nutrition: {
+        // не нужно
         calories: 520,
         fat: '20g',
         carbohydrates: '45g',
@@ -52,12 +55,12 @@ export class KebabFooter {
       description:
         'Grilled chicken kebab wrapped in fresh pita bread with salad and garlic sauce.',
       ingredients: [
-        ' - Grilled lamb',
-        ' - Pita bread',
-        ' - Lettuce',
-        ' - Tomato',
-        ' - Onion',
-        ' - Garlic sauce',
+        'Grilled chicken',
+        'Pita bread',
+        'Lettuce',
+        'Tomato',
+        'Onion',
+        'Garlic sauce',
       ],
       price: 6.99,
       currency: 'EUR',
@@ -86,12 +89,12 @@ export class KebabFooter {
       description:
         'Juicy beef kebab served with garlic sauce and fresh vegetables.',
       ingredients: [
-        ' - Grilled lamb',
-        ' - Pita bread',
-        ' - Lettuce',
-        ' - Tomato',
-        ' - Onion',
-        ' - Garlic sauce',
+        'Beef',
+        'Pita bread',
+        'Lettuce',
+        'Tomato',
+        'Onion',
+        'Garlic sauce',
       ],
       price: 32,
       currency: 'PLN',
