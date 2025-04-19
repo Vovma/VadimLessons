@@ -13,6 +13,10 @@
         <div class="product-description product-price">
           <span>{{ yourOwnName.price }}{{yourOwnName.currency}}</span>
         </div>
+        <div class="product-description product-name-2">
+          <span class="product__name">Name:</span>
+          <span>{{ yourOwnName.name }}</span>
+        </div>
         <div class="product-description product-ingridients">
           <span class="product-ingridients__name">Ingredients:</span>
           <span
@@ -21,6 +25,19 @@
           >
             {{ingridient}}
           </span>
+        </div>
+
+        <div class="product-description product-availability">
+          <span>Availability:</span>
+          <span>{{ yourOwnName.availability }}</span>
+        </div>
+        <div class="product-description product-description-2">
+          <span class="product-description__name">Description:</span>
+          <span>{{ yourOwnName.description }}</span>
+        </div>
+        <div class="product-description product-brand">
+          <span>Brand:</span>
+          <span>{{ yourOwnName.brand }}</span>
         </div>
         <div class="product-description product-nutritions">
           <div class="product-nutritions__el">
