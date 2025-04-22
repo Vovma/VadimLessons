@@ -1,0 +1,90 @@
+<div class="main-page">
+  <button
+    class="craete-kebab__btn"
+    mat-flat-button
+    color="primary"
+    (click)="openDialog()"
+  >
+    Create New Kebab
+  </button>
+</div>
+<div class="kebab-page">
+  <div class="left-side">
+    <div class="product-card">
+      <div class="product2" *ngFor="let yourOwnName of kebabList">
+        <div class="product-description image">
+          <img [src]="yourOwnName.image" [alt]="yourOwnName.name" />
+        </div>
+        <div class="product-description product-name">
+          <span>{{ yourOwnName.name }}</span>
+        </div>
+        <div class="product-description product-price">
+          <span>{{ yourOwnName.price }}{{ yourOwnName.currency }}</span>
+        </div>
+
+        <div class="product-description card">
+          <button class="add-to-card" (click)="openProduct(yourOwnName)">
+            OPEN PRODUCT
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="right-side">
+    <div class="big-product-card">
+      <div class="product2 big">
+        <div class="product-description image">
+          <img [src]="selectedElement.image" [alt]="selectedElement.name" />
+        </div>
+        <div class="product-description product-name">
+          <span>{{ selectedElement.name }}</span>
+        </div>
+        <div class="product-description product-price">
+          <span>{{ selectedElement.price }}{{ selectedElement.currency }}</span>
+        </div>
+        <div class="product-description product-name-2">
+          <span class="product__name">Name:</span>
+          <span>{{ selectedElement.name }}</span>
+        </div>
+        <div class="product-description product-ingridients">
+          <span class="product-ingridients__name">Ingredients:</span>
+          <span
+            class="product-ingridients__value"
+            *ngFor="let ingridient of selectedElement.ingredients"
+          >
+            {{ ingridient }}
+          </span>
+        </div>
+
+        <div class="product-description product-availability">
+          <span>Availability:</span>
+          <span>{{ selectedElement.availability }}</span>
+        </div>
+        <div class="product-description product-description-2">
+          <span class="product-description__name">Description:</span>
+          <span>{{ selectedElement.description }}</span>
+        </div>
+        <div class="product-description product-brand">
+          <span>Brand:</span>
+          <span>{{ selectedElement.brand }}</span>
+        </div>
+        <div class="product-description product-nutritions">
+          <div class="product-nutritions__el">
+            <span>Calories:</span>
+            <span>{{ selectedElement.calories }}</span>
+          </div>
+          <div class="product-nutritions__el">
+            <span>Fat:</span>
+            <span>{{ selectedElement.fat }}</span>
+          </div>
+        </div>
+
+        <div class="product-description card">
+          <button class="add-to-card" (click)="openProduct(selectedElement)">
+            ADD TO CARD
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

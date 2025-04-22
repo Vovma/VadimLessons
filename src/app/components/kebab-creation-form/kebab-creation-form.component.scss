@@ -1,50 +1,22 @@
 .form-content {
-  padding: 20px;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  .Kebbcrfrm {
-    font-size: larger;
-    color: rgb(207, 37, 37);
-    font-weight: bold;
-    font-size: 20px;
-  }
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 6px;
+}
 
-  .form-columns {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    align-items: flex-start;
-  }
-  .form-left {
-    gap: 40px;
-    display: flex;
-    flex-direction: column;
-  }
-  .example-form-field {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 20px;
-  }
-  .row-lists {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  .btns-content {
-    display: flex;
-    justify-content: end;
-    gap: 10px;
+.btns-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 
-    button {
-      width: 60px;
-    }
+  button {
+    width: 60px;
   }
-  .kebab-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  padding: 20px;
+}
+
+// Global
+
+mat-form-field {
+  width: 250px;
 }
