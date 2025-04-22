@@ -39,14 +39,6 @@
       </mat-form-field>
 
       <mat-form-field class="example-form-field" appearance="outline">
-        <mat-label>Kebab sauce</mat-label>
-        <input matInput type="text" formControlName="sause" />
-        <button matSuffix mat-icon-button aria-label="Clear">
-          <mat-icon>close</mat-icon>
-        </button>
-      </mat-form-field>
-
-      <mat-form-field class="example-form-field" appearance="outline">
         <mat-label>Kebab size</mat-label>
         <input matInput type="text" formControlName="size" />
         <button matSuffix mat-icon-button aria-label="Clear">
@@ -86,6 +78,70 @@
         <button matSuffix mat-icon-button aria-label="Clear">
           <mat-icon>close</mat-icon>
         </button>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Sause</mat-label>
+        <mat-select formControlName="sause" multiple>
+          @for (sause of sauseList; track sause) {
+          <mat-option [value]="sause">{{ sause }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Nutrition</mat-label>
+        <mat-select formControlName="nutrition" multiple>
+          @for (nutrition of nutritionList; track nutrition) {
+          <mat-option [value]="nutrition">{{ nutrition }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>spicyLevel</mat-label>
+        <mat-select formControlName="spicyLevel" multiple>
+          @for (spicyLevel of spicyLevelList; track spicyLevel) {
+          <mat-option [value]="spicyLevel">{{ spicyLevel }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Brand</mat-label>
+        <mat-select formControlName="brand" multiple>
+          @for (brand of brandList; track brand) {
+          <mat-option [value]="brand">{{ brand }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Rating</mat-label>
+        <mat-select formControlName="rating" multiple>
+          @for (rating of ratingList; track rating) {
+          <mat-option [value]="rating">{{ rating }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Calories</mat-label>
+        <mat-select formControlName="calories" multiple>
+          @for (calories of caloriesList ; track calories) {
+          <mat-option [value]="calories">{{ calories }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Vegetarian</mat-label>
+        <mat-select formControlName="vegetarian" multiple>
+          @for (vegetarian of vegetarianList ; track vegetarian) {
+          <mat-option [value]="vegetarian">{{ vegetarian }}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Fat</mat-label>
+        <mat-select formControlName="fat" multiple>
+          @for (fat of fatList ; track fat) {
+          <mat-option [value]="fat">{{ fat }}</mat-option>
+          }
+        </mat-select>
       </mat-form-field>
     </div>
   </form>
