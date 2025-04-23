@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-kebab-creation-form',
@@ -9,7 +10,8 @@ import { FormControl, FormGroup } from '@angular/forms';
   standalone: false,
 })
 export class KebabCreationFormComponent {
-  constructor() {}
+  constructor(private dialogRef: MatDialogRef<KebabCreationFormComponent>) {}
+
   public kebabIngredientsList = [
     'Chicken',
     'Beef',
@@ -152,7 +154,7 @@ export class KebabCreationFormComponent {
     sause: new FormControl(''),
     size: new FormControl(''),
     ingredients: new FormControl(''),
-    availability: new FormControl(''),
+    image: new FormControl('assets/lamb.jpg'),
     rating: new FormControl(''),
     nutrition: new FormControl(''),
     brand: new FormControl(''),
@@ -165,7 +167,7 @@ export class KebabCreationFormComponent {
   });
 
   onSave() {
-    console.log('form', this.createKebabForm.value);
+    this.dialogRef.close(this.createKebabForm.value);
   }
   onClear() {
     this.createKebabForm.reset();
