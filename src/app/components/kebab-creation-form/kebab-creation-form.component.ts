@@ -154,7 +154,7 @@ export class KebabCreationFormComponent {
     sause: new FormControl(''),
     size: new FormControl(''),
     ingredients: new FormControl(''),
-    image: new FormControl('assets/lamb.jpg'),
+    image: new FormControl(''),
     rating: new FormControl(''),
     nutrition: new FormControl(''),
     brand: new FormControl(''),
@@ -167,8 +167,35 @@ export class KebabCreationFormComponent {
   });
 
   onSave() {
-    this.dialogRef.close(this.createKebabForm.value);
+    const kebab = [
+      this.createKebabForm.value.id,
+      this.createKebabForm.value.name,
+      this.createKebabForm.value.price,
+      this.createKebabForm.value.currency,
+      this.createKebabForm.value.size,
+      this.createKebabForm.value.weight,
+      this.createKebabForm.value.ingredients,
+      this.createKebabForm.value.allergens,
+      this.createKebabForm.value.description,
+      this.createKebabForm.value.sause,
+      this.createKebabForm.value.nutrition,
+      this.createKebabForm.value.spicyLevel,
+      this.createKebabForm.value.calories,
+      this.createKebabForm.value.vegetarian,
+      this.createKebabForm.value.brand,
+      this.createKebabForm.value.rating,
+      this.createKebabForm.value.fat,
+      this.createKebabForm.value.image,
+    ];
+    const stored = localStorage.getItem('kebabs');
+    const kebabs: any[] = stored ? JSON.parse(stored) : [];
+    kebabs.push(kebab);
+    localStorage.setItem('kebabs', JSON.stringify(kebabs));
+    const storedKebabs = localStorage.getItem('kebabs');
+    const kebabList: any[] = storedKebabs ? JSON.parse(storedKebabs) : [];
+    console.log(kebabList);
   }
+
   onClear() {
     this.createKebabForm.reset();
   }
