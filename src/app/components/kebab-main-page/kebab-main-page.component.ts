@@ -37,6 +37,8 @@ export class KebabMainPage {
       this.cd.markForCheck();
     });
   }
+  public addToCardList: any = [];
+
   public kebabList: any = [];
 
   public selectedElement = {
@@ -83,10 +85,16 @@ export class KebabMainPage {
 
   addToCard(nameWhatYouWant: any): void {
     console.log('add to card', nameWhatYouWant);
+
     if (this.cart[this.selectedElement.name]) {
       this.cart[this.selectedElement.name]++;
     } else {
       this.cart[this.selectedElement.name] = 1;
     }
+    this.addToCardList = JSON.parse(
+      localStorage.getItem('addToCardList') || '[]'
+    );
+    this.addToCardList.push(this.selectedElement);
+    localStorage.setItem('addToCardList', JSON.stringify(this.addToCardList));
   }
 }
