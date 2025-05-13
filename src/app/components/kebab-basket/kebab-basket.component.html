@@ -1,1 +1,13 @@
-<span>Vadim Test Basket Component</span>
+<div class="product-card" *ngIf="basketList.length > 0">
+  <div class="product2" *ngFor="let yourOwnName of basketList">
+    <div class="product-description image">
+      <img [src]="'assets/lamb.jpg'" />
+    </div>
+    <div class="product-description product-name">
+      <span>{{ yourOwnName?.name }}</span>
+    </div>
+    <div class="product-description product-price">
+      <span>{{ yourOwnName?.price }}{{ yourOwnName?.currency }}</span>
+    </div>
+  </div>
+</div>

@@ -9,4 +9,10 @@ import { MatDialogRef } from '@angular/material/dialog';
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: false,
 })
-export class KebabBasketComponent {}
+export class KebabBasketComponent {
+  public basketList: any = [];
+
+  constructor() {
+    this.basketList = JSON.parse(localStorage.getItem('addToCardList') || '[]');
+  }
+}

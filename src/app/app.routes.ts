@@ -5,7 +5,7 @@ import { KebabMainPage } from './components/kebab-main-page/kebab-main-page.comp
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', component: KebabMainPage },
+  //   { path: '**', component: KebabMainPage },
 
   { path: 'home', component: KebabMainPage },
   { path: 'basket', component: KebabBasketComponent },

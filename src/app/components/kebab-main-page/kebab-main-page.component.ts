@@ -21,9 +21,7 @@ export interface testObjectInterface {
   standalone: false,
 })
 export class KebabMainPage {
-  constructor(public dialog: MatDialog, private cd: ChangeDetectorRef) {
-    this.kebabList = JSON.parse(localStorage.getItem('kebabList') || '[]');
-  }
+  constructor(public dialog: MatDialog, private cd: ChangeDetectorRef) {}
 
   openDialog(): void {
     let dialogRef = this.dialog.open(KebabCreationFormComponent);
@@ -32,7 +30,7 @@ export class KebabMainPage {
       this.kebabList.push(formData);
       console.log('kebabList', this.kebabList);
 
-      localStorage.setItem('kebabList', JSON.stringify(this.kebabList));
+      localStorage.setItem('basketList', JSON.stringify(this.addToCardList));
 
       this.cd.markForCheck();
     });
