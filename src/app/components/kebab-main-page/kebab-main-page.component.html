@@ -10,16 +10,16 @@
 </div>
 <div class="kebab-page">
   <div class="left-side">
-    <div class="product-card">
+    <div class="product-card" *ngIf="kebabList.length > 0">
       <div class="product2" *ngFor="let yourOwnName of kebabList">
         <div class="product-description image">
-          <img [src]="'assets/lamb.jpg'" [alt]="yourOwnName.name" />
+          <img [src]="'assets/lamb.jpg'" />
         </div>
         <div class="product-description product-name">
-          <span>{{ yourOwnName.name }}</span>
+          <span>{{ yourOwnName?.name }}</span>
         </div>
         <div class="product-description product-price">
-          <span>{{ yourOwnName.price }}{{ yourOwnName.currency }}</span>
+          <span>{{ yourOwnName?.price }}{{ yourOwnName?.currency }}</span>
         </div>
 
         <div class="product-description card">
@@ -34,23 +34,28 @@
     <div class="big-product-card">
       <div class="product2 big">
         <div class="product-description image">
-          <img [src]="selectedElement.image" [alt]="selectedElement.name" />
+          <img [src]="'assets/lamb.jpg'" [alt]="selectedElement?.name" />
         </div>
         <div class="product-description product-name">
-          <span>{{ selectedElement.name }}</span>
+          <span>{{ selectedElement?.name }}</span>
         </div>
         <div class="product-description product-price">
-          <span>{{ selectedElement.price }}{{ selectedElement.currency }}</span>
+          <span
+            >{{ selectedElement?.price }}{{ selectedElement?.currency }}</span
+          >
         </div>
         <div class="product-description product-name-2">
           <span class="product__name-2">Name:</span>
-          <span>{{ selectedElement.name }}</span>
+          <span>{{ selectedElement?.name }}</span>
         </div>
-        <div class="product-description product-ingridients">
+        <div
+          class="product-description product-ingridients"
+          *ngIf="selectedElement?.ingredients.length"
+        >
           <span class="product-ingridients__name">Ingredients:</span>
           <span
             class="product-ingridients__value"
-            *ngFor="let ingridient of selectedElement.ingredients"
+            *ngFor="let ingridient of selectedElement?.ingredients"
           >
             {{ ingridient }}
           </span>
@@ -58,21 +63,19 @@
 
         <div class="product-description product-availability">
           <span>Availability:</span>
-          <span>{{ selectedElement.availability }}</span>
+          <span>{{ selectedElement?.availability }}</span>
         </div>
         <div class="product-description product-description-2">
           <span class="product-description__name">Description:</span>
-          <span>{{ selectedElement.description }}</span>
+          <span>{{ selectedElement?.description }}</span>
         </div>
         <div class="product-description product-brand">
           <span>Brand:</span>
-          <span>{{ selectedElement.brand }}</span>
+          <span>{{ selectedElement?.brand }}</span>
         </div>
 
         <div class="product-description card">
-          <button class="add-to-card" (click)="openProduct(selectedElement)">
-            ADD TO CARD
-          </button>
+          <button class="add-to-card" (click)="addToCard()">ADD TO CARD</button>
         </div>
       </div>
     </div>

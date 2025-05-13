@@ -23,6 +23,8 @@ import { KebabMenuComponent } from './components/kebab-menu/kebab-menu.component
 import { KebabFooter } from './components/kebab-footer/kebab-footer';
 import { KebabCreationFormComponent } from './components/kebab-creation-form/kebab-creation-form.component';
 import { KebabMainPage } from './components/kebab-main-page/kebab-main-page.component';
+import { KebabBasketComponent } from './components/kebab-basket/kebab-basket.component';
+import { AppRoutingModule } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { KebabMainPage } from './components/kebab-main-page/kebab-main-page.comp
     KebabMenuComponent,
     KebabFooter,
     KebabCreationFormComponent,
+    KebabBasketComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { KebabMainPage } from './components/kebab-main-page/kebab-main-page.comp
     MatDialogClose,
     MatDialogContent,
     MatDialogTitle,
+    AppRoutingModule,
   ],
   exports: [KebabMainPage],
   bootstrap: [AppComponent],

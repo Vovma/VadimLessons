@@ -41,7 +41,7 @@ export class KebabMainPage {
 
   public kebabList: any = [];
 
-  public selectedElement = {
+  public selectedElement: any = {
     id: 'kebab001',
     name: 'Lamb Kebab Wrap',
     image: 'assets/lamb.jpg',
@@ -81,19 +81,10 @@ export class KebabMainPage {
   openProduct(nameWhatYouWant: any): void {
     console.log('open product', nameWhatYouWant);
     this.selectedElement = nameWhatYouWant;
+    console.log('kebab', this.selectedElement);
   }
 
-  addToCard(nameWhatYouWant: any): void {
-    console.log('add to card', nameWhatYouWant);
-
-    if (this.cart[this.selectedElement.name]) {
-      this.cart[this.selectedElement.name]++;
-    } else {
-      this.cart[this.selectedElement.name] = 1;
-    }
-    this.addToCardList = JSON.parse(
-      localStorage.getItem('addToCardList') || '[]'
-    );
+  addToCard(): void {
     this.addToCardList.push(this.selectedElement);
     localStorage.setItem('addToCardList', JSON.stringify(this.addToCardList));
   }
