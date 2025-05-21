@@ -9,4 +9,14 @@ import { MatDialogRef } from '@angular/material/dialog';
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: false,
 })
-export class KebabContactUsComponent {}
+export class KebabContactUsComponent {
+  FormContactUs = new FormGroup({
+    Name: new FormControl(''),
+    Email: new FormControl(''),
+    Phone: new FormControl(''),
+    Message: new FormControl(''),
+  });
+  onSave(): void {
+    console.log(this.FormContactUs.value);
+  }
+}

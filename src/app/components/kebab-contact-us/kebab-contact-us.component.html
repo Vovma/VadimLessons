@@ -1,1 +1,66 @@
-<span>Contact Us Test</span>
+<div class="contact-us-page">
+  <div class="content">
+    <div class="kebab-image">
+      <img [src]="'assets/kebab1.png'" />
+    </div>
+    <div class="contact-us-text">
+      <span>Contact Us</span>
+    </div>
+    <div class="gitwu"><span>Get in touch with us</span></div>
+    <div class="info-content">
+      <div class="info-element">
+        <div class="left-side">
+          <mat-icon>location_on</mat-icon>
+        </div>
+        <div class="right-side">
+          <span class="big">Adress</span>
+          <span>123 kebab St</span>
+        </div>
+      </div>
+      <div class="info-element">
+        <div class="left-side">
+          <mat-icon>call</mat-icon>
+        </div>
+        <div class="right-side">
+          <span class="big">Phone</span>
+          <span>555 555 555</span>
+        </div>
+      </div>
+      <div class="info-element">
+        <div class="left-side">
+          <mat-icon>mail</mat-icon>
+        </div>
+        <div class="right-side">
+          <span class="big">Email</span>
+          <span>kebabgmail.com</span>
+        </div>
+      </div>
+    </div>
+    <div class="form-contact">
+      <span class="contact-form-text">Contact us</span>
+      <form class="contact-us-form" [formGroup]="FormContactUs">
+        <div class="contact-fields">
+          <mat-form-field class="example-form-field" appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput type="text" formControlName="Name" />
+          </mat-form-field>
+          <mat-form-field class="example-form-field" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="text" formControlName="Email" />
+          </mat-form-field>
+        </div>
+        <div class="contact-fields-2">
+          <mat-form-field class="example-form-field" appearance="outline">
+            <mat-label>Phone</mat-label>
+            <input matInput type="text" formControlName="Phone" />
+          </mat-form-field>
+          <mat-form-field class="example-form-field" appearance="outline">
+            <mat-label>Message</mat-label>
+            <input matInput type="text" formControlName="Message" />
+          </mat-form-field>
+        </div>
+      </form>
+      <button mat-raised-button color="primary" (click)="onSave()">SEND</button>
+    </div>
+  </div>
+</div>
