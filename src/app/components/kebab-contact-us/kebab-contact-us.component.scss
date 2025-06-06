@@ -1,5 +1,5 @@
 .contact-us-page {
-  background: #f4c27a; // цвет крафтовой бумаги
+  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,7 +71,7 @@
     }
 
     .form-contact {
-      background: #fff0d9;
+      background: #f5f4f4;
       padding: 20px;
       border: 2px solid #4a2f0d;
       border-radius: 10px;
@@ -98,28 +98,28 @@
         gap: 10px;
       }
       .example-form-field-email {
-        display: flex;
-        margin-left: 60px;
-      }
-      input {
-        padding: 10px;
-        font-size: 16px;
-        border-radius: 5px;
-        width: 100%;
-        box-sizing: border-box;
+        flex: 1;
       }
     }
 
     button {
-      background-color: #4a2f0d;
       color: #ffffff;
-      border: none;
+      background-color: #8b4513;
+      // border: none;
+      // padding: 10px;
+      // font-size: 16px;
+      // cursor: pointer;
+      // border-radius: 5px;
+      // align-self: center;
+      // width: 100px;
+      &:disabled {
+        background-color: #d4d4d4;
+      }
+    }
+    .progress-spinner {
+      display: flex;
       padding: 10px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 5px;
-      align-self: center;
-      width: 100px;
+      justify-content: center;
     }
   }
 }

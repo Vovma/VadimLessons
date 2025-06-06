@@ -38,29 +38,39 @@
     </div>
     <div class="form-contact">
       <span class="contact-form-text">Contact us</span>
-      <form class="contact-us-form" [formGroup]="FormContactUs">
+      <div *ngIf="!loading" class="progress-spinner">
+        <mat-spinner diameter="40" color="primary"></mat-spinner>
+      </div>
+      <form class="contact-us-form" *ngIf="loading" [formGroup]="FormContactUs">
         <div class="contact-fields">
-          <mat-form-field class="example-form-field" appearance="outline">
+          <mat-form-field appearance="outline">
             <mat-label>Name</mat-label>
             <input matInput type="text" formControlName="Name" />
           </mat-form-field>
-          <mat-form-field class="example-form-field" appearance="outline">
+          <mat-form-field class="example-form-field-email" appearance="outline">
             <mat-label>Email</mat-label>
             <input matInput type="text" formControlName="Email" />
           </mat-form-field>
         </div>
         <div class="contact-fields-2">
-          <mat-form-field class="example-form-field" appearance="outline">
+          <mat-form-field appearance="outline">
             <mat-label>Phone</mat-label>
             <input matInput type="text" formControlName="Phone" />
           </mat-form-field>
-          <mat-form-field class="example-form-field" appearance="outline">
+          <mat-form-field appearance="outline">
             <mat-label>Message</mat-label>
             <input matInput type="text" formControlName="Message" />
           </mat-form-field>
         </div>
       </form>
-      <button mat-raised-button color="primary" (click)="onSave()">SEND</button>
+      <button
+        mat-raised-button
+        color="brown-button"
+        [disabled]="FormContactUs.invalid"
+        (click)="onSave()"
+      >
+        SEND
+      </button>
     </div>
   </div>
 </div>

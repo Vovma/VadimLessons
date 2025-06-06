@@ -7,6 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import {
   MatDialogActions,
@@ -53,6 +54,7 @@ import { KebabContactUsComponent } from './components/kebab-contact-us/kebab-con
     MatDialogContent,
     MatDialogTitle,
     AppRoutingModule,
+    MatProgressSpinnerModule,
   ],
   exports: [KebabMainPage],
   bootstrap: [AppComponent],
