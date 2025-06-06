@@ -27,6 +27,7 @@ import { KebabMainPage } from './components/kebab-main-page/kebab-main-page.comp
 import { KebabBasketComponent } from './components/kebab-basket/kebab-basket.component';
 import { AppRoutingModule } from './app.routes';
 import { KebabContactUsComponent } from './components/kebab-contact-us/kebab-contact-us.component';
+import { AdminComponent } from './components/admin-component/admin-component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { KebabContactUsComponent } from './components/kebab-contact-us/kebab-con
     KebabCreationFormComponent,
     KebabBasketComponent,
     KebabContactUsComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
