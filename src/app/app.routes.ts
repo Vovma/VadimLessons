@@ -3,15 +3,16 @@ import { KebabBasketComponent } from './components/kebab-basket/kebab-basket.com
 import { NgModule } from '@angular/core';
 import { KebabMainPage } from './components/kebab-main-page/kebab-main-page.component';
 import { KebabContactUsComponent } from './components/kebab-contact-us/kebab-contact-us.component';
+import { AdminComponent } from './components/admin-component/admin-component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   //   { path: '**', component: KebabMainPage },
-  { path: '', redirectTo: '/contact-us', pathMatch: 'full' },
-  // { path: '**', component: KebabMainPage },
+
   { path: 'home', component: KebabMainPage },
   { path: 'basket', component: KebabBasketComponent },
   { path: 'contact-us', component: KebabContactUsComponent },
+  { path: 'admin', component: AdminComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

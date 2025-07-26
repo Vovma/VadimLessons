@@ -14,8 +14,11 @@
     gap: 50px;
 
     span {
-      color: rgb(49, 179, 45);
+      color: rgb(0, 0, 0);
       font-weight: bold;
+      &:hover {
+        cursor: pointer;
+      }
     }
     .home-btn {
       margin-left: 100px;
@@ -72,9 +75,12 @@
     }
     span {
       order: 1;
-      color: green;
+      color: rgb(0, 0, 0);
       font-weight: bold;
       margin-right: 40px;
+      &:hover {
+        cursor: pointer;
+      }
     }
     .cont-btn-2 {
       margin-right: 200px;
